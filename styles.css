@@ -1,0 +1,245 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
+
+/* Root Colors */
+:root {
+    --teal: #4CA7C0;
+    --purple: #484FB7;
+    --lavender: #6B8FE7;
+    --yellow: #E9BB57;
+    --pink: #D9526F;
+    --dark-gray: #1E1E1E;
+    --white: #ffffff;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+h1, h2 {
+    font-family: 'Kavoon', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.15em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navigation Menu */
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: var(--yellow); /* Yellow */
+    padding: 1rem 0;
+}
+
+.menu a {
+    color: var(--dark-gray); /* Dark Gray */
+    font-family: 'Kavoon', sans-serif;
+    font-size: 1.15em;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu a:hover {
+    color: var(--teal); /* Teal */
+}
+
+/* Header Styles */
+.hero {
+    background-color: var(--purple); /* Purple */
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: var(--white);
+    position: relative;
+}
+
+.hero h1 {
+    font-family: 'Kavoon', sans-serif;
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.25em;
+    margin-top: 0.5rem;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    height: 0.5rem;
+    width: 100%;
+    background-color: var(--pink); /* Pink Bar */
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--lavender);
+}
+
+.services-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background-color: var(--white);
+    color: var(--dark-gray);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+/* Why Choose Us Section */
+.why-us {
+    background-color: var(--pink);
+    padding: 2rem;
+    text-align: center;
+}
+
+.why-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.why-card {
+    background-color: var(--teal);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 2rem;
+    background-color: var(--lavender);
+    text-align: center;
+}
+
+.pricing-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.pricing-table {
+    background-color: var(--white);
+    color: var(--dark-gray);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table td {
+    padding: 0.5rem;
+}
+
+table td:first-child {
+    text-align: left;
+}
+
+/* CTA Section */
+.cta {
+    background-color: var(--pink);
+    text-align: center;
+    padding: 2rem;
+}
+
+.cta button {
+    background-color: var(--white);
+    color: var(--dark-gray);
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.cta button:hover {
+    background-color: var(--yellow);
+    color: var(--dark-gray);
+}
+
+/* Footer Section */
+footer {
+    background-color: var(--purple);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Media Queries */
+@media (min-width: 450px) {
+    .services-grid, .why-grid, .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 620px) {
+    .services-grid, .why-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 950px) {
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
