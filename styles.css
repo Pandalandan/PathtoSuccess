@@ -135,7 +135,7 @@ img {
 
 .why-grid {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     margin-top: 2rem;
 }
 
